@@ -1,2 +1,2 @@
-# HIT-C-15
+# HIT-Cpp-15
 answer for homework 
