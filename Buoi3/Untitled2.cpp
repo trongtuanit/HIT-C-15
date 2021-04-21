@@ -4,16 +4,14 @@ using namespace std;
 
 bool isSquareNumber(int a) {
 	for(int i = 0; i <= sqrt(a); i++)
-		if(i*i==a)
-			return true;
+		if(i*i==a) return true;
 	return false;
 }
 
 bool isSquareArray(int *a, int n) 
 {
 	for(int i = 0; i < n; i++)
-		if(!isSquareNumber(a[i]))
-			return false;
+		if(!isSquareNumber(a[i])) return false;
 	return true;
 }
 

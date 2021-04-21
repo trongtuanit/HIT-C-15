@@ -6,9 +6,8 @@ bool isPerfectNumber(int a) {
 	int sum = 0;
     for(int i=1;i<=a/2;i++)
         if(a%i==0) 
-            sum+=i;  
-    if(sum==a) 
-		return true; 
+			sum+=i;  
+    if(sum==a) return true; 
     return false;
 }
 
@@ -23,10 +22,8 @@ bool isPerfectArray(int *a, int n)
 void findMaxAndMin(int *a, int n, int &max, int &min) {
 	max = min = a[0];
 	for(int i = 1; i < n; i++) {
-		if(a[i] > max)
-			max = a[i];
-		if(a[i] < min)
-			min = a[i];
+		if(a[i] > max)  max = a[i];
+		if(a[i] < min)  min = a[i];
 	}
 }
 
@@ -57,11 +54,13 @@ int main() {
 	int *a = new int[n];
 	for(int i = 0; i < n; i++)
 		cin >> a[i];
-	if(isPerfectArray(a,n)) {
+	if(isPerfectArray(a,n)) 
+	{
 		findMaxAndMin(a,n,max,min);
 		cout << max - min;
 	}
-	else {
+	else 
+	{
 		deleteOddNuber(a,n);
 		getArray(a,n);
 	}

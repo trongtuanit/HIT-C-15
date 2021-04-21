@@ -24,15 +24,13 @@ bool isSuperPrimeNumber(int a) {
 
 bool isSuperSuperPrimeNumber(int a) {
 	while(a>0) {
-		if(isPrimeNumber(a)==false)
-			return false;
 		if(isPrimeNumber(a%10)==false)
 			return false;
 		if(isPrimeNumber(a/10)==false)
 			return false;
 		a/=10;
 	}
-	return true;
+	return isPrimeNumber(a);
 
 }
 
